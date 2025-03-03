@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id = "header">
+<div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
+            <img src="images/Logo2.0.png" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -20,8 +20,80 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi I'm <span>Charlene</span><br>Njambi From Kenya</h1>
+        </div>
     </div>
-
 </div>
+
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I’m Charlene Njambi, an IT specialist, developer, and cybersecurity enthusiast with experience in web development, networking, and technical support...</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Building Android apps</li>
+                        <li><span>Networking</span><br>Configuration and troubleshooting of Networks</li>
+                        <li><span>IT Support</span><br>Offering IT support to companies</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Designing Web/App interfaces at Strathmore University</li>
+                        <li><span>2023 - Current</span><br>Web app Development for various projects at Strathmore University and freelance</li>
+                        <li><span>2024- Current</span><br>Build an Android App called Tutoria</li>
+                        <li><span>2025- Current</span><br>Configuration and troubleshooting of Networks at GlobeNet Technologies Limited through my internship</li>
+                        <li><span>2025- Current</span><br>Offering IT support to companies at GlobeNet Technologies clients through my internship</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-2026</span><br>Bachelor of Science in informatics and Computer Science at Strathmore University</li>
+                        <li><span>2024</span><br> Foundational Cloud Computing at Ajira Emobilis </li>
+                        <li><span>2022-2023</span><br>CCNA Certification at Cisco</li>
+                        <li><span>IT Support</span><br>Offering IT support to companies</li>
+                        <li><span>2018-2022</span><br>KCSE(High School) at Naivasha Girls High School</li>
+                        <li><span>2009- 2017</span><br>Primary School education at Musa Gitau Primary school</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function opentab(event, tabname) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        // Remove active class from all tab links
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+
+        // Remove active class from all tab contents
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+
+        // Add active class to clicked tab and corresponding content
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
